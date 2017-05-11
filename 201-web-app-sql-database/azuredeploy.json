@@ -348,22 +348,6 @@
           "customEmails": [ ]
         }
       }
-    },
-    {
-      "apiVersion": "2015-05-01",
-      "name": "[concat('AppInsights', variables('webSiteName'))]",
-      "type": "Microsoft.Insights/components",
-      "location": "centralus",
-      "dependsOn": [
-        "[variables('webSiteName')]"
-      ],
-      "tags": {
-        "[concat('hidden-link:', resourceId('Microsoft.Web/sites', variables('webSiteName')))]": "Resource",
-        "displayName": "AppInsightsComponent"
-      },
-      "properties": {
-        "ApplicationId": "[variables('webSiteName')]"
-      }
     }
   ],
   "outputs": {
